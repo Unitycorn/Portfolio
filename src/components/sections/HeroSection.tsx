@@ -4,6 +4,7 @@ import {
   heroStats,
   latestCvLink,
 } from "../../data";
+import HeroIdentity from "../ui/HeroIdentity";
 
 function HeroSection() {
   return (
@@ -12,6 +13,8 @@ function HeroSection() {
       className="grid items-center gap-10 pb-16 pt-6 lg:grid-cols-[1.15fr_0.85fr]"
     >
       <div className="space-y-8 animate-rise">
+        <HeroIdentity />
+
         <div className="space-y-5">
           <h1 className="max-w-4xl text-5xl font-semibold leading-[0.95] tracking-[-0.05em] sm:text-6xl lg:text-7xl">
             Hi, I am Michael - happy you found me here!
@@ -97,8 +100,9 @@ function HeroSection() {
             </div>
 
             <a
-              href="https://github.com/unitycorn"
+              href={githubProfile.href}
               target="_blank"
+              rel="noreferrer"
               className="group flex items-center justify-center rounded-3xl border border-line bg-ink px-4 py-4 text-paper transition hover:bg-ink/95"
             >
               <p className="mt-1 text-base font-semibold">Visit my GitHub</p>
