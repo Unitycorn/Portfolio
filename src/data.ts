@@ -16,6 +16,8 @@ export type FeaturedProject = {
   description: string;
   stack: string[];
   href: string;
+  hreflive: string;
+  status: string;
   accent: "moss" | "clay" | "ink" | "sand";
 };
 
@@ -23,7 +25,7 @@ const toAssetPath = (fileName: string) => `/${encodeURI(fileName)}`;
 
 export const navItems = [
   { label: "Profile", href: "#profile" },
-  { label: "Focus", href: "#focus" },
+  { label: "Tectstack", href: "#focus" },
   { label: "Projects", href: "#projects" },
   { label: "Documents", href: "#documents" },
   { label: "Principles", href: "#principles" },
@@ -38,19 +40,24 @@ export const heroStats = [
 
 export const focusAreas = [
   {
-    title: "React interfaces",
-    description:
-      "Component-driven layouts with a clear hierarchy, reusable sections, and polished interaction states.",
+    title: "Frontend",
+    description: "React, TypeScript, TailwindCSS, SASS, HTML, CSS, JavaScript",
   },
   {
-    title: "TypeScript discipline",
-    description:
-      "Typed data models and predictable props keep the project maintainable as the page grows.",
+    title: "Backend",
+    description: "Python, FastAPI, Flask, Node.js, PHP",
   },
   {
-    title: "Tailwind execution",
-    description:
-      "Fast visual iteration with consistent spacing, disciplined color use, and a professional finish.",
+    title: "Databases",
+    description: "MySQL, PostgreSQL, SQLite",
+  },
+  {
+    title: "Testing & Tooling",
+    description: "pytest, unit testing, CI/CD pipelines, Git, RESTful APIs",
+  },
+  {
+    title: "AI-Assisted Development",
+    description: "OpenAI Codex, Claude AI",
   },
 ];
 
@@ -72,7 +79,7 @@ export const documentCards: DocumentCard[] = [
     files: [
       {
         label: "Open certificate",
-        href: "https://drive.google.com/file/d/1z970-huQ8NXyVemjXJiDmpla-6Xiv9YE/view?usp=drive_link",
+        href: toAssetPath("Scrimba_Cert_Advanced_React.pdf"),
       },
     ],
   },
@@ -111,19 +118,22 @@ export const documentCards: DocumentCard[] = [
 
 export const principles = [
   {
-    title: "Structure before decoration",
+    title: "Communicate early",
+    keyword: "Talk",
     description:
-      "Every section has a job: introduce the profile, prove credibility, and make documents easy to access.",
+      "Problems don't get smaller when you stay quiet. I'd rather raise a concern too soon than deliver a surprise too late.",
   },
   {
-    title: "Strong typography",
+    title: "Keep learning",
+    keyword: "Educate",
     description:
-      "A restrained editorial layout keeps the page readable and gives the work a professional tone.",
+      "From my apprenticeship to Masterschool I've never stopped picking up new skills. Curiosity is what got me here.",
   },
   {
-    title: "Clear evidence",
+    title: "Show up as yourself",
+    keyword: "Human",
     description:
-      "The documents from /docs are surfaced directly so the portfolio is grounded in real material.",
+      "I bring my whole self to work, the gamer, the singer, the problem-solver. The best teams I've been part of made room for that.",
   },
 ];
 
@@ -134,7 +144,7 @@ export const documentPreview = {
 
 export const latestCvLink = {
   label: "CV update 05/2026",
-  href: toAssetPath("CV_Flaig_052026.pdf"),
+  href: toAssetPath("CV_Michael_Flaig_EN.pdf"),
 };
 
 export const githubProfile = {
@@ -167,39 +177,57 @@ export const contactLinks = [
 
 export const featuredProjects: FeaturedProject[] = [
   {
-    name: "Project_X_Frontend",
-    title: "Project X Frontend",
+    name: "Advanced repo analyzer",
+    title: "Compass",
     description:
-      "React frontend for a video streaming platform, with home page, detail views, channel pages, upload flows, and session-based auth.",
-    stack: ["React 19", "Vite 7", "React Router 7", "Tailwind CSS 4", "Formik"],
-    href: "https://github.com/Unitycorn/Project_X_Frontend",
+      "Continuing to contribute to this open-source project after my internship at Webeet.io as part of the original team. Ongoing work includes improving test coverage, refining the API design, and optimized structured output.",
+    stack: ["Python", "TypeScript", "GitHub Actions"],
+    href: "https://github.com/Sammyduzit/compass",
+    hreflive: "",
+    status: "ongoing",
     accent: "moss",
   },
   {
-    name: "Project_X_Backend",
-    title: "Project X Backend",
+    name: "Fullstack Video Streaming Platform",
+    title: "FlowVid",
     description:
-      "Python/Flask backend for the streaming platform, built around authentication, media uploads, and a relational database.",
-    stack: ["Flask", "SQLAlchemy", "ImageKit", "Gunicorn"],
-    href: "https://github.com/Unitycorn/Project_X_Backend",
+      "A full-stack video streaming platform using React/Vite for the frontend and Python/Flask for backend API endpoints, including structured routing and repository separation",
+    stack: [
+      "React 19",
+      "Vite 7",
+      "React Router 7",
+      "Tailwind CSS 4",
+      "Formik",
+      "Flask",
+      "SQLAlchemy",
+      "ImageKit",
+      "Gunicorn",
+    ],
+    href: "https://github.com/Unitycorn/Project_X_Frontend",
+    hreflive: "",
+    status: "refactoring",
     accent: "clay",
   },
   {
-    name: "Projektwoche",
+    name: "Animated React Website",
     title: "Guild Wars 2 Landing Page",
     description:
       "React landing page for Guild Wars 2: End of Dragons, focused on dynamic routing, REST APIs, and SASS-driven presentation.",
     stack: ["React", "REST APIs", "Dynamic routing", "SASS", "SSR"],
     href: "https://github.com/Unitycorn/Projektwoche",
+    hreflive: "https://gw2landingpage.vercel.app/",
+    status: "live",
     accent: "sand",
   },
   {
-    name: "Wikifeud",
+    name: "CLI Multiplayer Game",
     title: "Wikifeud",
     description:
       "Python-powered multiplayer quiz game built during Hackathon #1 at MSIT and shipped under time pressure with a team.",
     stack: ["Python", "Hackathon build", "Multiplayer", "Game logic"],
     href: "https://github.com/Unitycorn/Wikifeud",
+    hreflive: "",
+    status: "completed",
     accent: "ink",
   },
 ];

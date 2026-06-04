@@ -1,17 +1,21 @@
-import { focusAreas } from '../../data';
-import SectionHeading from '../ui/SectionHeading';
+import { focusAreas } from "../../data";
+import SectionHeading from "../ui/SectionHeading";
 
 function FocusSection() {
   return (
     <section id="focus" className="py-8 sm:py-12">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
         <SectionHeading
-          eyebrow="Focus"
-          title="A clean stack with a clear visual hierarchy."
+          eyebrow="Built to Build"
+          title="From my first HTML page to full-stack APIs - this is what I do; with an always growing toolbox."
         />
         <p className="max-w-xl text-sm leading-7 text-ink/70 sm:text-right">
-          The layout avoids generic portfolio boilerplate and leans on strong spacing, a calm
-          palette, and evidence-first storytelling.
+          I started as a frontend developer — pixel-perfect templates, CMS
+          integrations, responsive layouts. Over the years, that foundation grew
+          into full-stack territory: backend APIs with Python and FastAPI,
+          automated testing, and building scalable applications with React and
+          Node.js. Today my sweet spot is the full picture — from a clean UI to
+          a well-structured API, with tests that actually run.
         </p>
       </div>
 
@@ -24,8 +28,12 @@ function FocusSection() {
             <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-ink text-sm font-semibold text-paper">
               {item.title.slice(0, 2)}
             </div>
-            <h3 className="mt-5 text-xl font-semibold tracking-[-0.03em]">{item.title}</h3>
-            <p className="mt-3 text-sm leading-7 text-ink/70">{item.description}</p>
+            <h3 className="mt-5 text-xl font-semibold tracking-[-0.03em]">
+              {item.title}
+            </h3>
+            <p className="mt-3 text-sm leading-7 text-ink/70">
+              {item.description}
+            </p>
           </article>
         ))}
       </div>

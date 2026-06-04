@@ -1,9 +1,4 @@
-import {
-  documentPreview,
-  githubProfile,
-  heroStats,
-  latestCvLink,
-} from "../../data";
+import { githubProfile } from "../../data";
 import HeroIdentity from "../ui/HeroIdentity";
 
 function HeroSection() {
@@ -20,42 +15,16 @@ function HeroSection() {
             Hi, I am Michael - happy you found me here!
           </h1>
           <p className="max-w-2xl text-lg leading-8 text-ink/75 sm:text-xl">
-            I am a Fullstack Web Developer with 10+ years of experience in
-            frontend development, CMS projects, and web applications, now
-            focused on building modern full-stack solutions with React,
-            Python/FastAPI, Node.js, and automated testing.
+            I'm Michael Flaig, a Fullstack Web Developer based in Hamburg with
+            10+ years of experience in frontend development and a growing
+            passion for modern full-stack solutions. After my apprenticeship as
+            an IT Specialist for Application Development, I've worked with
+            companies like Lichtblick SE, Schmidt-Ohm + Partner and most
+            recently webeet.io, writing clean code, thinking along and
+            delivering results. Since completing the Software Engineering
+            program at Masterschool, I'm looking for the right next step: a team
+            that values quality work and gives room to grow.
           </p>
-        </div>
-
-        <div className="flex flex-wrap gap-3">
-          <a
-            href={documentPreview.href}
-            className="inline-flex items-center justify-center rounded-full bg-ink px-5 py-3 text-sm font-medium text-paper transition hover:bg-ink/90"
-          >
-            Open certificate preview
-          </a>
-          <a
-            href={latestCvLink.href}
-            className="inline-flex items-center justify-center rounded-full border border-line bg-white/70 px-5 py-3 text-sm font-medium text-ink transition hover:bg-paper/90"
-          >
-            Browse latest CV
-          </a>
-        </div>
-
-        <div className="grid gap-3 sm:grid-cols-3">
-          {heroStats.map((stat) => (
-            <div
-              key={stat.label}
-              className="rounded-2xl border border-line bg-white/75 p-4 shadow-insetGlow backdrop-blur"
-            >
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.28em] text-ink/55">
-                {stat.label}
-              </p>
-              <p className="mt-2 text-base font-semibold text-ink">
-                {stat.value}
-              </p>
-            </div>
-          ))}
         </div>
       </div>
 

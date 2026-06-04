@@ -6,8 +6,8 @@ function DocumentsSection() {
     <section id="documents" className="py-8 sm:py-12">
       <SectionHeading
         eyebrow="Documents"
-        title="The original files are surfaced directly from the project."
-        description="Each card links back to the source documents so the portfolio stays close to the material that shaped it."
+        title="Proof of Work"
+        description="Certificates, references and my CV, everything you might want to see before reaching out. No need to ask twice."
       />
 
       <div className="mt-8 grid gap-4 xl:grid-cols-2">

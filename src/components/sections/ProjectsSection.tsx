@@ -1,17 +1,14 @@
-import { featuredProjects } from '../../data';
-import SectionHeading from '../ui/SectionHeading';
+import { featuredProjects } from "../../data";
+import SectionHeading from "../ui/SectionHeading";
 
 function ProjectsSection() {
   return (
     <section id="projects" className="py-8 sm:py-12">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
-        <SectionHeading
-          eyebrow="Featured Projects"
-          title="Pinned GitHub work, translated into a portfolio layout."
-        />
+        <SectionHeading eyebrow="Featured Projects" title="Things I've Built" />
         <p className="max-w-xl text-sm leading-7 text-ink/70 sm:text-right">
-          These cards are derived from your pinned repositories and carry through the repo names,
-          summaries, and stack details from GitHub.
+          Side projects, hackathon builds and internship work, each one a chance
+          to try something new and push a little further. Take a look around.
         </p>
       </div>
 
@@ -32,20 +29,22 @@ function ProjectsSection() {
               </div>
               <span
                 className={`rounded-full border px-3 py-1 text-xs font-semibold ${
-                  project.accent === 'moss'
-                    ? 'border-moss/20 bg-moss/10 text-moss'
-                    : project.accent === 'clay'
-                      ? 'border-clay/20 bg-clay/10 text-clay'
-                      : project.accent === 'sand'
-                        ? 'border-amber-900/10 bg-sand text-ink'
-                        : 'border-ink/20 bg-ink text-paper'
+                  project.accent === "moss"
+                    ? "border-moss/20 bg-moss/10 text-moss"
+                    : project.accent === "clay"
+                      ? "border-clay/20 bg-clay/10 text-clay"
+                      : project.accent === "sand"
+                        ? "border-amber-900/10 bg-sand text-ink"
+                        : "border-ink/20 bg-ink text-paper"
                 }`}
               >
-                Featured
+                {project.status}
               </span>
             </div>
 
-            <p className="mt-4 text-sm leading-7 text-ink/70">{project.description}</p>
+            <p className="mt-4 text-sm leading-7 text-ink/70">
+              {project.description}
+            </p>
 
             <div className="mt-5 flex flex-wrap gap-2">
               {project.stack.map((item) => (
@@ -59,9 +58,20 @@ function ProjectsSection() {
             </div>
 
             <div className="mt-6 flex items-center justify-between gap-4">
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.28em] text-ink/50">
-                GitHub repository
-              </p>
+              {project.hreflive === "" ? (
+                <p className="font-mono text-[0.68rem] uppercase tracking-[0.28em] text-ink/50">
+                  GitHub repository
+                </p>
+              ) : (
+                <a
+                  href={project.hreflive}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="rounded-full bg-ink px-4 py-2 text-sm font-medium text-paper transition hover:bg-ink/90"
+                >
+                  Visit Website
+                </a>
+              )}
               <a
                 href={project.href}
                 target="_blank"
