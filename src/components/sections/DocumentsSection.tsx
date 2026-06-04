@@ -1,5 +1,6 @@
 import { documentCards, documentPreview } from "../../data";
 import SectionHeading from "../ui/SectionHeading";
+import certificatePreview from "../../../img/CoC_Eng.png";
 
 function DocumentsSection() {
   return (
@@ -46,7 +47,7 @@ function DocumentsSection() {
         <div className="grid gap-4 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
           <div className="rounded-[1.5rem] border border-line bg-paper/85 p-4">
             <img
-              src={documentPreview.href}
+              src={certificatePreview}
               alt="Certificate preview"
               className="h-auto w-full rounded-[1rem] border border-line object-cover"
             />
