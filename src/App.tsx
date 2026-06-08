@@ -5,8 +5,11 @@ import ContactSection from './components/sections/ContactSection';
 import DocumentsSection from './components/sections/DocumentsSection';
 import FocusSection from './components/sections/FocusSection';
 import HeroSection from './components/sections/HeroSection';
+import BuildProcessSection from './components/sections/BuildProcessSection';
+import OpenSourceSection from './components/sections/OpenSourceSection';
 import PrinciplesSection from './components/sections/PrinciplesSection';
 import ProjectsSection from './components/sections/ProjectsSection';
+import TestingSection from './components/sections/TestingSection';
 
 function App() {
   return (
@@ -25,6 +28,9 @@ function App() {
         <HeroSection />
         <FocusSection />
         <ProjectsSection />
+        <OpenSourceSection />
+        <TestingSection />
+        <BuildProcessSection />
         <DocumentsSection />
         <PrinciplesSection />
         <ContactSection />

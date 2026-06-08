@@ -14,6 +14,11 @@ export type FeaturedProject = {
   name: string;
   title: string;
   description: string;
+  problem: string;
+  solution: string;
+  architecture: string[];
+  challenges: string[];
+  learnings: string[];
   stack: string[];
   href: string;
   hreflive: string;
@@ -25,8 +30,11 @@ const toAssetPath = (fileName: string) => `/${encodeURI(fileName)}`;
 
 export const navItems = [
   { label: "Profile", href: "#profile" },
-  { label: "Tectstack", href: "#focus" },
+  { label: "Techstack", href: "#focus" },
   { label: "Projects", href: "#projects" },
+  { label: "Open Source", href: "#open-source" },
+  { label: "Testing", href: "#testing" },
+  { label: "How I Build", href: "#build-process" },
   { label: "Documents", href: "#documents" },
   { label: "Principles", href: "#principles" },
   { label: "Contact", href: "#contact" },
@@ -40,24 +48,51 @@ export const heroStats = [
 
 export const focusAreas = [
   {
-    title: "Frontend",
-    description: "React, TypeScript, TailwindCSS, SASS, HTML, CSS, JavaScript",
+    title: "Frontend Engineering",
+    summary:
+      "Component-driven user interfaces, responsive layouts and clean frontend architecture.",
+    skills: [
+      "React",
+      "TypeScript",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Tailwind CSS",
+      "SASS",
+      "React Router",
+      "Responsive Design",
+    ],
   },
   {
-    title: "Backend",
-    description: "Python, FastAPI, Flask, Node.js, PHP",
+    title: "Backend Engineering",
+    summary:
+      "Backend APIs, data handling and full-stack delivery across modern web applications.",
+    skills: [
+      "Python",
+      "FastAPI",
+      "Flask",
+      "Node.js",
+      "PHP",
+      "REST APIs",
+      "SQL",
+      "PostgreSQL",
+      "MySQL",
+    ],
   },
   {
-    title: "Databases",
-    description: "MySQL, PostgreSQL, SQLite",
-  },
-  {
-    title: "Testing & Tooling",
-    description: "pytest, unit testing, CI/CD pipelines, Git, RESTful APIs",
-  },
-  {
-    title: "AI-Assisted Development",
-    description: "OpenAI Codex, Claude AI",
+    title: "Quality Engineering",
+    summary:
+      "Testing, validation and delivery practices that keep production code reliable.",
+    skills: [
+      "Vitest",
+      "Pytest",
+      "Unit Testing",
+      "Integration Testing",
+      "TDD",
+      "CI/CD",
+      "Git",
+      "API Validation",
+    ],
   },
 ];
 
@@ -181,6 +216,17 @@ export const featuredProjects: FeaturedProject[] = [
     title: "Compass",
     description:
       "Continuing to contribute to this open-source project after my internship at Webeet.io as part of the original team. Ongoing work includes improving test coverage, refining the API design, and optimized structured output.",
+    problem:
+      "Repository information is spread across files, code structure and metadata, which makes it harder to understand a project quickly.",
+    solution:
+      "Built and continued improving an analyzer that surfaces structural and quality signals for GitHub repositories.",
+    architecture: ["GitHub Repository", "Analyzer Logic", "Structured Output"],
+    challenges: [
+      "Feature development in an existing codebase",
+      "Testing improvements around changing logic",
+      "API design for structured output",
+    ],
+    learnings: ["Code quality", "Testing", "Repository analysis", "API design"],
     stack: ["Python", "TypeScript", "GitHub Actions"],
     href: "https://github.com/Sammyduzit/compass",
     hreflive: "",
@@ -192,6 +238,17 @@ export const featuredProjects: FeaturedProject[] = [
     title: "FlowVid",
     description:
       "A full-stack video streaming platform using React/Vite for the frontend and Python/Flask for backend API endpoints, including structured routing and repository separation",
+    problem:
+      "Video streaming needs clear navigation, media handling and a backend that can keep frontend and data access separated.",
+    solution:
+      "Built a full-stack platform with a React frontend, a Flask API and structured separation between app layers.",
+    architecture: ["React Frontend", "Flask API", "SQLAlchemy / Database"],
+    challenges: [
+      "Frontend and backend repository separation",
+      "Structured routing",
+      "Media and image handling with ImageKit",
+    ],
+    learnings: ["API structure", "Routing", "Repository separation", "Full-stack delivery"],
     stack: [
       "React 19",
       "Vite 7",
@@ -213,6 +270,17 @@ export const featuredProjects: FeaturedProject[] = [
     title: "Guild Wars 2 Landing Page",
     description:
       "React landing page for Guild Wars 2: End of Dragons, focused on dynamic routing, REST APIs, and SASS-driven presentation.",
+    problem:
+      "The project needed a themed landing page that could present content dynamically instead of relying on static sections.",
+    solution:
+      "Built an animated React landing page with routing and API-driven presentation for the game expansion.",
+    architecture: ["React UI", "REST APIs", "Presentation Layer"],
+    challenges: [
+      "Dynamic routing",
+      "REST API integration",
+      "SASS-driven presentation",
+    ],
+    learnings: ["Routing", "API usage", "Frontend presentation", "UI animation"],
     stack: ["React", "REST APIs", "Dynamic routing", "SASS", "SSR"],
     href: "https://github.com/Unitycorn/Projektwoche",
     hreflive: "https://gw2landingpage.vercel.app/",
@@ -224,6 +292,17 @@ export const featuredProjects: FeaturedProject[] = [
     title: "Wikifeud",
     description:
       "Python-powered multiplayer quiz game built during Hackathon #1 at MSIT and shipped under time pressure with a team.",
+    problem:
+      "The team needed a multiplayer game concept that could be built and shipped within hackathon constraints.",
+    solution:
+      "Built a Python-based quiz game with multiplayer logic and game rules that could be delivered under time pressure.",
+    architecture: ["Python Game Logic", "Multiplayer Layer", "CLI Interface"],
+    challenges: [
+      "Hackathon time pressure",
+      "Multiplayer coordination",
+      "Game logic implementation",
+    ],
+    learnings: ["Team delivery", "Game logic", "Fast iteration", "Multiplayer basics"],
     stack: ["Python", "Hackathon build", "Multiplayer", "Game logic"],
     href: "https://github.com/Unitycorn/Wikifeud",
     hreflive: "",
@@ -231,3 +310,16 @@ export const featuredProjects: FeaturedProject[] = [
     accent: "ink",
   },
 ];
+
+export const openSourceContribution = {
+  title: "Compass Repository Analyzer",
+  description:
+    "Compass is an open-source repository analyzer for GitHub projects. It helps inspect repository structure and surface code quality signals, so teams can understand a codebase faster.",
+  contributions: [
+    "Feature Development",
+    "Testing Improvements",
+    "Code Quality Enhancements",
+    "Repository Analysis Features",
+  ],
+  href: "https://github.com/Sammyduzit/compass",
+};
