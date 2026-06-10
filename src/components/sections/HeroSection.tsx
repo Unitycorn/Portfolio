@@ -29,7 +29,7 @@ function HeroSection() {
               Michael Flaig
             </h1>
             <p className="text-lg font-semibold tracking-[-0.03em] text-ink sm:text-xl">
-              Fullstack Software Engineer
+              Fullstack Developer
             </p>
             <p className="max-w-2xl text-sm uppercase tracking-[0.28em] text-ink/60 sm:text-base">
               TypeScript • React • Flask • PostgreSQL
