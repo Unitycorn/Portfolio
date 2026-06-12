@@ -9,7 +9,7 @@ function HeroIdentity() {
           </span>
         </div>
         <p className="mt-4 text-sm uppercase tracking-[0.28em] text-ink/55">
-          Open Source Contributor
+          Open Source Contributor:
           <br />
           Compass Repository Analyzer
         </p>
@@ -26,9 +26,9 @@ function HeroIdentity() {
           <b>Current Learning</b>
         </p>
         <ul>
-          <li>Angular</li>
           <li>Clean Architecture</li>
-          <li>TDD</li>
+          <li>Angular</li>
+          <li>TDD (Jest / Vitest)</li>
         </ul>
       </div>
     </div>

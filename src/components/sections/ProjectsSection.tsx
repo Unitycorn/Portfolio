@@ -1,7 +1,32 @@
-import { featuredProjects } from "../../data";
+import { useEffect, useState } from "react";
+import { featuredProjects, type FeaturedProject } from "../../data";
 import SectionHeading from "../ui/SectionHeading";
 
 function ProjectsSection() {
+  const [selectedProject, setSelectedProject] =
+    useState<FeaturedProject | null>(null);
+
+  useEffect(() => {
+    if (!selectedProject) {
+      return undefined;
+    }
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setSelectedProject(null);
+      }
+    };
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    window.addEventListener("keydown", handleKeyDown);
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [selectedProject]);
+
   return (
     <section id="projects" className="py-8 sm:py-12">
       <div className="flex flex-col gap-4 sm:flex-row sm:items-end sm:justify-between">
@@ -66,27 +91,25 @@ function ProjectsSection() {
               </div>
             </div>
 
-            <div className="mt-6 rounded-[1.5rem] border border-line bg-paper/85 p-4">
-              <p className="font-mono text-[0.68rem] uppercase tracking-[0.32em] text-clay">
-                Architecture
-              </p>
-              <div className="mt-4 grid gap-3 md:grid-cols-[1fr_auto_1fr_auto_1fr] md:items-center">
-                {project.architecture.map((step, index) => (
-                  <div key={step} className="contents">
-                    <div className="rounded-2xl border border-line bg-white/85 p-4">
-                      <p className="text-sm font-semibold tracking-[-0.02em] text-ink">
-                        {step}
-                      </p>
-                    </div>
-                    {index < project.architecture.length - 1 ? (
-                      <div className="flex justify-center text-2xl font-semibold text-moss">
-                        →
-                      </div>
-                    ) : null}
-                  </div>
-                ))}
+            <button
+              type="button"
+              onClick={() => setSelectedProject(project)}
+              className="mt-6 block w-full rounded-[1.5rem] border border-line bg-paper/85 p-4 text-left transition hover:-translate-y-0.5 hover:border-moss/30 hover:bg-white"
+            >
+              <div className="flex items-center justify-between gap-3">
+                <p className="font-mono text-[0.68rem] uppercase tracking-[0.32em] text-clay">
+                  Architecture
+                </p>
+                <span className="text-[0.68rem] uppercase tracking-[0.28em] text-ink/50">
+                  Click to enlarge
+                </span>
               </div>
-            </div>
+              <img
+                src={project.architectureImg}
+                alt={`Architecture diagram for ${project.title}`}
+                className="mt-4 h-auto w-full rounded-[1rem] border border-line bg-white p-2 shadow-sm"
+              />
+            </button>
 
             <div className="mt-6 grid gap-4 md:grid-cols-2">
               <div className="rounded-[1.4rem] border border-line bg-white/75 p-4">
@@ -155,6 +178,47 @@ function ProjectsSection() {
           </article>
         ))}
       </div>
+
+      {selectedProject ? (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-ink/75 px-4 py-6 backdrop-blur-md"
+          onClick={() => setSelectedProject(null)}
+        >
+          <div
+            className="max-w-2xl max-h-[90vh] rounded-[2rem] object-contain border border-line bg-paper p-4 shadow-2xl"
+            onClick={(event) => event.stopPropagation()}
+          >
+            <div className="flex items-start justify-between gap-4 px-2 pb-4 pt-2">
+              <div>
+                <p className="font-mono text-[0.68rem] uppercase tracking-[0.32em] text-moss">
+                  Architecture diagram
+                </p>
+                <h3 className="mt-3 text-2xl font-semibold tracking-[-0.03em]">
+                  {selectedProject.title}
+                </h3>
+                <p className="mt-2 text-sm leading-7 text-ink/65">
+                  Click outside the image or press Escape to close.
+                </p>
+              </div>
+              <button
+                type="button"
+                onClick={() => setSelectedProject(null)}
+                className="rounded-full border border-line bg-white/80 px-4 py-2 text-sm font-medium text-ink transition hover:border-moss/30 hover:bg-moss/10"
+              >
+                Close
+              </button>
+            </div>
+
+            <div className="overflow-hidden rounded-[1.5rem] border border-line bg-white p-3">
+              <img
+                src={selectedProject.architectureImg}
+                alt={`Large architecture diagram for ${selectedProject.title}`}
+                className="h-auto w-full rounded-[1rem]"
+              />
+            </div>
+          </div>
+        </div>
+      ) : null}
     </section>
   );
 }

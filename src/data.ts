@@ -17,6 +17,7 @@ export type FeaturedProject = {
   problem: string;
   solution: string;
   architecture: string[];
+  architectureImg: string;
   challenges: string[];
   learnings: string[];
   stack: string[];
@@ -221,6 +222,7 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built and continued improving an analyzer that surfaces structural and quality signals for GitHub repositories.",
     architecture: ["GitHub Repository", "Analyzer Logic", "Structured Output"],
+    architectureImg: "/img/architecture.compass.png",
     challenges: [
       "Feature development in an existing codebase",
       "Testing improvements around changing logic",
@@ -243,12 +245,18 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built a full-stack platform with a React frontend, a Flask API and structured separation between app layers.",
     architecture: ["React Frontend", "Flask API", "SQLAlchemy / Database"],
+    architectureImg: "/img/architecture.flowvid.svg",
     challenges: [
       "Frontend and backend repository separation",
       "Structured routing",
       "Media and image handling with ImageKit",
     ],
-    learnings: ["API structure", "Routing", "Repository separation", "Full-stack delivery"],
+    learnings: [
+      "API structure",
+      "Routing",
+      "Repository separation",
+      "Full-stack delivery",
+    ],
     stack: [
       "React 19",
       "Vite 7",
@@ -262,8 +270,8 @@ export const featuredProjects: FeaturedProject[] = [
     ],
     href: "https://github.com/Unitycorn/Project_X_Frontend",
     hreflive: "",
-    status: "refactoring",
-    accent: "clay",
+    status: "ongoing",
+    accent: "moss",
   },
   {
     name: "Animated React Website",
@@ -275,12 +283,18 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built an animated React landing page with routing and API-driven presentation for the game expansion.",
     architecture: ["React UI", "REST APIs", "Presentation Layer"],
+    architectureImg: "/img/architecture.landingpage.png",
     challenges: [
       "Dynamic routing",
       "REST API integration",
       "SASS-driven presentation",
     ],
-    learnings: ["Routing", "API usage", "Frontend presentation", "UI animation"],
+    learnings: [
+      "Routing",
+      "API usage",
+      "Frontend presentation",
+      "UI animation",
+    ],
     stack: ["React", "REST APIs", "Dynamic routing", "SASS", "SSR"],
     href: "https://github.com/Unitycorn/Projektwoche",
     hreflive: "https://gw2landingpage.vercel.app/",
@@ -297,12 +311,18 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built a Python-based quiz game with multiplayer logic and game rules that could be delivered under time pressure.",
     architecture: ["Python Game Logic", "Multiplayer Layer", "CLI Interface"],
+    architectureImg: "/img/architecture.wikifeud.png",
     challenges: [
       "Hackathon time pressure",
       "Multiplayer coordination",
       "Game logic implementation",
     ],
-    learnings: ["Team delivery", "Game logic", "Fast iteration", "Multiplayer basics"],
+    learnings: [
+      "Team delivery",
+      "Game logic",
+      "Fast iteration",
+      "Multiplayer basics",
+    ],
     stack: ["Python", "Hackathon build", "Multiplayer", "Game logic"],
     href: "https://github.com/Unitycorn/Wikifeud",
     hreflive: "",

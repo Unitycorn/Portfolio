@@ -48,7 +48,7 @@ function OpenSourceSection() {
                   </p>
                 </div>
                 <div className="flex justify-center text-2xl font-semibold text-moss md:rotate-0">
-                  ↓
+                  →
                 </div>
                 <div className="rounded-2xl border border-line bg-white/85 p-4">
                   <p className="text-sm font-semibold tracking-[-0.02em] text-ink">
@@ -59,7 +59,7 @@ function OpenSourceSection() {
                   </p>
                 </div>
                 <div className="flex justify-center text-2xl font-semibold text-moss">
-                  ↓
+                  →
                 </div>
                 <div className="rounded-2xl border border-line bg-white/85 p-4">
                   <p className="text-sm font-semibold tracking-[-0.02em] text-ink">

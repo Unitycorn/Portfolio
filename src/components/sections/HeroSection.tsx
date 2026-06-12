@@ -35,8 +35,9 @@ function HeroSection() {
               TypeScript • React • Flask • PostgreSQL
             </p>
             <p className="max-w-2xl text-lg leading-8 text-ink/75 sm:text-xl">
-              Building maintainable web applications with a strong focus on
-              testing, API design and developer experience.
+              Fullstack Developer with 10+ years Frontend experience. Building
+              maintainable web applications with a strong focus on testing, API
+              design and developer experience.
             </p>
           </div>
 
@@ -55,7 +56,7 @@ function HeroSection() {
             </div>
             <div className="rounded-2xl border border-line bg-paper/80 px-4 py-4">
               <p className="text-sm font-semibold tracking-[-0.02em]">
-                Former Software Engineering Intern
+                API Developer
               </p>
             </div>
             <div className="rounded-2xl border border-line bg-paper/80 px-4 py-4">
