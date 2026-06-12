@@ -1,3 +1,8 @@
+import compassArchitecture from "/img/architecture.compass.png";
+import flowvidArchitecture from "/img/architecture.flowvid.svg";
+import landingpageArchitecture from "/img/architecture.landingpage.png";
+import wikifeudArchitecture from "/img/architecture.wikifeud.png";
+
 export type LinkItem = {
   label: string;
   href: string;
@@ -222,7 +227,7 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built and continued improving an analyzer that surfaces structural and quality signals for GitHub repositories.",
     architecture: ["GitHub Repository", "Analyzer Logic", "Structured Output"],
-    architectureImg: "/public/img/architecture.compass.png",
+    architectureImg: compassArchitecture,
     challenges: [
       "Feature development in an existing codebase",
       "Testing improvements around changing logic",
@@ -245,7 +250,7 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built a full-stack platform with a React frontend, a Flask API and structured separation between app layers.",
     architecture: ["React Frontend", "Flask API", "SQLAlchemy / Database"],
-    architectureImg: "/public/img/architecture.flowvid.svg",
+    architectureImg: flowvidArchitecture,
     challenges: [
       "Frontend and backend repository separation",
       "Structured routing",
@@ -283,7 +288,7 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built an animated React landing page with routing and API-driven presentation for the game expansion.",
     architecture: ["React UI", "REST APIs", "Presentation Layer"],
-    architectureImg: "/public/img/architecture.landingpage.png",
+    architectureImg: landingpageArchitecture,
     challenges: [
       "Dynamic routing",
       "REST API integration",
@@ -311,7 +316,7 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built a Python-based quiz game with multiplayer logic and game rules that could be delivered under time pressure.",
     architecture: ["Python Game Logic", "Multiplayer Layer", "CLI Interface"],
-    architectureImg: "/public/img/architecture.wikifeud.png",
+    architectureImg: wikifeudArchitecture,
     challenges: [
       "Hackathon time pressure",
       "Multiplayer coordination",

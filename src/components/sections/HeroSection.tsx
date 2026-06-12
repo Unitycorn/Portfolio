@@ -1,4 +1,4 @@
-import profilePhoto from "/public/img/1733990699641.jpeg";
+import profilePhoto from "/img/1733990699641.jpeg";
 import HeroIdentity from "../ui/HeroIdentity";
 
 function HeroSection() {
