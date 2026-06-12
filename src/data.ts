@@ -282,7 +282,7 @@ export const featuredProjects: FeaturedProject[] = [
     name: "Animated React Website",
     title: "Guild Wars 2 Landing Page",
     description:
-      "React landing page for Guild Wars 2: End of Dragons, focused on dynamic routing, REST APIs, and SASS-driven presentation.",
+      "In-house development: ​Served as a learning project for dynamic routing and API integration",
     problem:
       "The project needed a themed landing page that could present content dynamically instead of relying on static sections.",
     solution:
