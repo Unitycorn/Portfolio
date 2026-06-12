@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { documentCards, documentPreview } from "../../data";
 import SectionHeading from "../ui/SectionHeading";
-import certificatePreview from "../../../img/CoC_Eng.png";
+import certificatePreview from "/public/img/CoC_Eng.png";
 
 function DocumentsSection() {
   const [showMore, setShowMore] = useState(false);
