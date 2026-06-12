@@ -222,7 +222,7 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built and continued improving an analyzer that surfaces structural and quality signals for GitHub repositories.",
     architecture: ["GitHub Repository", "Analyzer Logic", "Structured Output"],
-    architectureImg: "/img/architecture.compass.png",
+    architectureImg: "./img/architecture.compass.png",
     challenges: [
       "Feature development in an existing codebase",
       "Testing improvements around changing logic",
@@ -245,7 +245,7 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built a full-stack platform with a React frontend, a Flask API and structured separation between app layers.",
     architecture: ["React Frontend", "Flask API", "SQLAlchemy / Database"],
-    architectureImg: "/img/architecture.flowvid.svg",
+    architectureImg: "./img/architecture.flowvid.svg",
     challenges: [
       "Frontend and backend repository separation",
       "Structured routing",
@@ -283,7 +283,7 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built an animated React landing page with routing and API-driven presentation for the game expansion.",
     architecture: ["React UI", "REST APIs", "Presentation Layer"],
-    architectureImg: "/img/architecture.landingpage.png",
+    architectureImg: "./img/architecture.landingpage.png",
     challenges: [
       "Dynamic routing",
       "REST API integration",
@@ -311,7 +311,7 @@ export const featuredProjects: FeaturedProject[] = [
     solution:
       "Built a Python-based quiz game with multiplayer logic and game rules that could be delivered under time pressure.",
     architecture: ["Python Game Logic", "Multiplayer Layer", "CLI Interface"],
-    architectureImg: "/img/architecture.wikifeud.png",
+    architectureImg: "./img/architecture.wikifeud.png",
     challenges: [
       "Hackathon time pressure",
       "Multiplayer coordination",
