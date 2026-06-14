@@ -27,7 +27,7 @@ function HeroIdentity() {
         </p>
         <ul>
           <li>Clean Architecture</li>
-          <li>Angular</li>
+          <li>Angular (for cross-framework understanding)</li>
           <li>TDD (Jest / Vitest)</li>
         </ul>
       </div>
